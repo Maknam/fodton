@@ -3,7 +3,7 @@ import { PageHero } from "../components";
 const board = [
   { name: "Dr. Richard Tawiah", detail: "University of Melbourne, Australia" },
   { name: "Mr. Enock Antwi Ankomah", detail: "Professional education, training and human development specialist, UK" },
-  { name: "Mr. John Apraku", detail: "Professional education, cybersecurity and entrepreneurship specialist, USA" },
+  { name: "Mr. John Apraku", detail: "Professional in Cybersecurity from  New Jersey Institute of Technology, USA, and  Expert in Professional  Educational Training" },
 ];
 
 const management = [

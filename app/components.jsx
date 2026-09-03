@@ -299,7 +299,7 @@ export function Footer() {
 
         <div className="footnote">
           © 2026 FODTON Institute of Training and Development Ltd.
-          Website by MaknamCrest Enterprise.
+          Website by MaknamCrest Digital Services.
         </div>
 
       </div>

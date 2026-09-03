@@ -15,7 +15,7 @@ export default function Home() {
       <section className="hero">
         <div className="container inner">
           <div className="hero-copy">
-            <span className="eyebrow">FODTON Institute · Accra, Ghana</span>
+            <span className="eyebrow">FODTON Institute of Training and Development· Accra, Ghana</span>
             <h1>Knowledge that builds skills. <span>Evidence that drives impact.</span></h1>
             <p>FODTON Institute of Training and Development equips individuals, businesses and institutions with practical knowledge, professional skills and evidence-based solutions for sustainable growth and development.</p>
             <div className="actions">
