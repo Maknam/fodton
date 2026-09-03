@@ -195,8 +195,14 @@ button,input,textarea,select{font:inherit}
 .training-number{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:#eaf2fd;color:var(--navy);font-size:13px;font-weight:700}
 .training-toggle{color:var(--red);font-size:26px;line-height:1;transition:transform .2s ease}
 .training-centre[open] .training-toggle{transform:rotate(45deg)}
-.training-centre ul{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 28px;margin:0;padding:4px 24px 24px 78px;color:var(--muted);line-height:1.55}
-.training-centre li::marker{color:var(--red)}
+.training-categories{padding:0 24px 24px 78px}
+.training-category{padding:22px 0;border-top:1px solid var(--line)}
+.training-category:first-child{padding-top:18px}
+.training-category:last-child{padding-bottom:0}
+.training-category h4{margin:0 0 13px;color:var(--navy);font-size:16px;font-weight:600;line-height:1.4}
+.training-category ul{display:grid;grid-template-columns:1fr;gap:9px;margin:0;padding:0 0 0 20px;color:var(--muted);font-size:14px;line-height:1.65}
+.training-category li{padding-left:4px}
+.training-category li::marker{color:var(--red);font-size:.85em}
 .compact-grid .card{padding:22px}
 .compact-grid .card h3{margin-top:0;color:var(--red);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
 .compact-grid .card p{margin-bottom:0;color:var(--ink);font-weight:500}
@@ -256,7 +262,7 @@ button,input,textarea,select{font:inherit}
  .pathway-card{min-height:350px}
  .team-grid-featured{grid-template-columns:minmax(0,380px)}
  .corporate-grid{grid-template-columns:1fr}
- .training-centre ul{grid-template-columns:1fr;padding-left:62px}
+ .training-categories{padding-left:62px}
  .heading{align-items:flex-start;flex-direction:column}
  .pill-list,.form-grid{grid-template-columns:1fr}
  .footer-grid{grid-template-columns:1fr 1fr}
@@ -293,7 +299,10 @@ button,input,textarea,select{font:inherit}
  .training-centre summary{gap:10px;padding:15px 14px}
  .training-centre summary h3{font-size:15px}
  .training-number{width:34px;height:34px}
- .training-centre ul{padding:2px 18px 18px 48px;font-size:14px}
+ .training-categories{padding:0 16px 18px 48px}
+ .training-category{padding:18px 0}
+ .training-category h4{font-size:15px}
+ .training-category ul{font-size:13px;line-height:1.65}
  .heading h2{font-size:clamp(30px,9vw,38px)}
  .footer{padding-top:48px}
 }

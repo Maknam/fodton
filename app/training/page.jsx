@@ -1,66 +1,6 @@
 import Link from "next/link";
 import { PageHero } from "../components";
-
-const centres = [
-  [
-    "Education, Health, Psychology, Counselling & Human Services",
-    [
-      "Education and educational leadership",
-      "Community health, public health and wellness",
-      "Healthcare administration",
-      "Home care and professional caregiving",
-      "Psychology and human behaviour",
-      "Counselling and human services",
-    ],
-  ],
-  [
-    "Advanced AI, Digital Technology, Media & Communication",
-    [
-      "Artificial intelligence and workplace digital skills",
-      "Web design, development and website management",
-      "Social media, digital marketing and e-commerce",
-      "Media, broadcasting, journalism and professional communication",
-    ],
-  ],
-  [
-    "Development, Project Management, Law, Governance & Leadership Studies",
-    [
-      "Project management, monitoring and evaluation",
-      "Development studies, economics and policy",
-      "NGO and nonprofit management",
-      "Law, governance, compliance and human rights",
-      "Politics, public leadership and democratic governance",
-    ],
-  ],
-  [
-    "Food & Hospitality Industry Management",
-    [
-      "Culinary arts and food production",
-      "Food safety, processing, preservation and quality",
-      "Hotel, restaurant and hospitality operations",
-      "Food entrepreneurship, marketing and business management",
-    ],
-  ],
-  [
-    "Advanced Business, Entrepreneurship, Finance, Trade & Supply Chain Studies",
-    [
-      "Business, entrepreneurship and administration",
-      "Business analytics and workplace productivity",
-      "Banking, finance, accounting and FinTech",
-      "International trade, import and export",
-      "Procurement, supply chain and logistics",
-    ],
-  ],
-  [
-    "Applied Agriculture, Agribusiness, Engineering & Technical Skills",
-    [
-      "Agribusiness, farm management and value chains",
-      "Agrifood processing, marketing and export",
-      "Engineering and construction project management",
-      "Occupational safety, renewable energy, CAD and facilities management",
-    ],
-  ],
-];
+import { centres } from "./programme-data";
 
 const executive = [
   "AI-assisted teaching, curriculum development & educational presentation",
@@ -126,41 +66,43 @@ export default function Page() {
         <div className="container">
           <div className="heading">
             <div className="copy">
-              <span className="eyebrow">
-                Choose a field and build practical expertise.
-              </span>
+              <span className="eyebrow">Professional education</span>
               <h2>
                 Professional Certificate Short Courses & Continuing Professional
                 Development (CPD) Programmes
               </h2>
-              <p>
-                Short courses and continuing professional development programmes
-                are organised through six specialist centres.
-              </p>
+              <p>Career Development | Professional Skills | Technical Competence</p>
             </div>
           </div>
 
           <div className="training-centres">
-            {centres.map(([title, areas], index) => (
+            {centres.map((centre, index) => (
               <details
                 className="training-centre"
-                key={title}
+                key={centre.name}
                 open={index === 0}
               >
                 <summary>
                   <span className="training-number">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3>{title}</h3>
+                  <h3>{centre.name}</h3>
                   <span className="training-toggle" aria-hidden="true">
                     +
                   </span>
                 </summary>
-                <ul>
-                  {areas.map((area) => (
-                    <li key={area}>{area}</li>
+                <div className="training-categories">
+                  {centre.categories.map((category) => (
+                    <section className="training-category" key={category.name}>
+                      <h4>{category.name}</h4>
+                      <ul>
+                        {category.programmes.map((programme) => (
+                          <li key={programme}>{programme}</li>
+                        ))}
+                      </ul>
+                    </section>
                   ))}
-                </ul>
+                </div>
               </details>
             ))}
           </div>
